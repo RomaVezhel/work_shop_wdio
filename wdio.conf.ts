@@ -38,7 +38,7 @@ export const config: Config = {
         // retries: 3,
         // grep: '@SMOKE'
     },
-    afterTest: function (test) {
+    afterTest: function (test: { error: undefined; }) {
         if (test.error !== undefined) {
             browser.takeScreenshot();
         }

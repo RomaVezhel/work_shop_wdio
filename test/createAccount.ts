@@ -11,10 +11,10 @@ describe('User', () => {
         })
 
         createAccount.confirmRegistration();
-        browser.pause(2000);
+        
         // const text = 'You logged into a secure area!'
         expect(createAccount.flashMess).toBeDisplayed();
-        expect(createAccount.flashText).toHaveText('You logged into a secure area!');
+        expect(createAccount.flashText).toHaveTextContaining('You logged into a secure area!');
 
         browser.pause(2000);
     })
